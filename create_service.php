@@ -1,10 +1,6 @@
 <?php
 // required headers
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
 
 require __DIR__ . '/vendor/autoload.php';
  
@@ -18,8 +14,7 @@ $twilio = new Client($sid, $token);
 
 $service = $twilio->chat->v2->services
                             ->create("Service");
-
-                            print($service->friendlyName);
+                            print_r($service->friendlyName);
         // set response code - 201 created
        // http_response_code(201);
  
