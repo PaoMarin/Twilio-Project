@@ -11,14 +11,17 @@
             <a class="navbar-brand" style="color:#FFFFFF" href="/home">Twilio Chat</a>
         </div>
         <ul class="nav navbar-nav" style="color:#FFFFFF">
-            <li><a style="color:#FFFFFF" href="/Twilio_Project/channels/read_channel.php">Channels</a></li>
+            <li><a style="color:#FFFFFF" href="/Twilio_Project/channel/get_channel.php">Channels</a></li>
             <li><a  style="color:#FFFFFF" href="/carritos">Carrito Compra</a></li>
             <li><a style="color:#FFFFFF" href="/checkout">Checkout</a></li>
             <li><a  style="color:#FFFFFF" href="/consulta_orden">Consultar Compras</a></li>
             <li class="dropdown" >
-                <a style="color:#FFFFFF" class="dropdown-toggle" data-toggle="dropdown" href="#">Configuración
-                <span class="caret"></span></a>
-            </li>
+        <a style="color:#FFFFFF" class="dropdown-toggle" data-toggle="dropdown" href="#">Administrator
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <!--Validar lo del usuario administrador !-->
+               <li><a href="/Twilio_Project/channels/read_channel.php">Channels</a></li>
+        </ul>
         </ul>
     </div>
     </nav>
