@@ -15,13 +15,13 @@ $twilio = new Client($sid, $token);
 $id_channel = $_GET['id'];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){  
-    $sid_member = $_POST['sid'];
+    $name_member = $_POST['nickname'];
     $member = $twilio->chat->v2->services("ISee610ed3920a4a5086a2d1cec428be0e")
                            ->channels($id_channel)
                            ->members
-                           ->create($sid_member);
+                           ->create($name_member);
                            echo "<script> alert('Created Member');
-                           window.location= '/Twilio_Project/channel/read_messages.php?channel=$id_channel'
+                           window.location= '/Twilio_Project/channel/read_messages.php?channel=$id_channel&member=$name_member'
                     </script>";
 
 }   
@@ -36,8 +36,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <body>
   <h3>Add a member to a channel</h3>
     <form method="POST">
-    <label>Enter your sid. Please!</label>
+    <label>Enter your sid:</label>
     <input type="text" name="sid" required autofocus value="<?php echo $sid ?>">
+    <label>And a Nickname: Please!</label>
+    <input type="text" name="nickname" required autofocus value="Example: Joskamarin">
     <input type="submit" value="Save">
     <a href='/Twilio_Project/channel/get_channel.php'>Back</a>
   </form>

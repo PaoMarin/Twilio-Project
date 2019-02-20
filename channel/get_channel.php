@@ -38,7 +38,7 @@ $channels = $twilio->chat->v2->services("ISee610ed3920a4a5086a2d1cec428be0e")
         <tr>
           <td><?php echo ($record->sid) ?></td>
           <td><?php echo ($record->friendlyName) ?></td>
-          <td> <a href='/Twilio_Project/channel/add_members.php?id= <?php echo ($record->sid)  ?>'>Join</a>        
+          <td> <a href='/Twilio_Project/channel/create_members.php?id= <?php echo ($record->sid)  ?>'>Join</a>        
           </td>
           <?php } ?> 
         </tr>
